@@ -3,5 +3,12 @@ Android Bluetooth Low Energy Discover
 Copyright (c) 2013 Mathias Claes
 
 
+BLE (Bluetooth Low Energy) Discover let you easely discover Bluetooth Smart devices.
+Bluetooth low energy (BLE) branded as Bluetooth Smart is a wireless computer network
+technology which is aimed at novel applications in the healthcare, fitness, security, and home entertainment industries.
+BLE Discover let you operate in two modes, Central and Peripheral.
+It allows you to scan and connect to devices and has the ability to set up your own Bluetooth GATT profiles.
 
+
+Features: ...
 
