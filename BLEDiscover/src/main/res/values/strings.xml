@@ -8,4 +8,9 @@
     <string name="hello_world" >Hello world!
     </string>
 
+    <string-array name="drawer_items">
+        <item>Devices</item>
+        <item>Services</item>
+    </string-array>
+
 </resources>
