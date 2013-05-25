@@ -20,9 +20,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
+import android.widget.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * MainActivity class
@@ -34,10 +35,35 @@ public class MainActivity extends Activity {
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
 
+    ListView list;
+    private LazyAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
+
+        HashMap<String, String> map = new HashMap<String, String>();
+
+        map.put("0", "0");
+        map.put("1", "test");
+        map.put("2", "test");
+        map.put("3", "test");
+
+        // adding HashList to ArrayList
+        songsList.add(map);
+
+        list = (ListView) findViewById(R.id.list);
+
+        // Getting adapter by passing xml data ArrayList
+        mAdapter = new LazyAdapter(this, songsList);
+        list.setAdapter(mAdapter);
+
+
+
 
         mMenuItems = getResources().getStringArray(R.array.drawer_items);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
